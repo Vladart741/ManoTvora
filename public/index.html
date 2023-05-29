@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/tailwind.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
     <div class="bg-white">
@@ -26,13 +27,93 @@
               </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+              <a href="#" class="text-sm font-semibold p-2 leading-6 text-gray-900">Pradžia</a>
+              <div x-data="{ open: false }" class="relative">
+                <button x-on:click="open = ! open" type="button" class="inline-flex p-2 items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
+                  <span>Produktai ir paslaugos</span>
+                  <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              
+                <div x-show="open" xx-show="open"
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 scale-90"
+                     x-transition:enter-end="opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-300"
+                     x-transition:leave-start="opacity-100 scale-100"
+                     x-transition:leave-end="opacity-0 scale-90"  
+                     class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 ">
+                  
+                  <div  class="w-screen max-w-sm flex-auto rounded-lg bg-white p-4 text-sm leading-6 shadow-2xl ring-1 ring-gray-900/5">
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Segmentinės tvoros
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Tinklo tvoros
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Medinės tvoros
+                        <span class="absolute inset-0"></span>
+                      </a>
+                     
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Metalo tvoros
+                        <span class="absolute inset-0"></span>
+                      </a>
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Kiemo vartai ir varteliai
+                        <span class="absolute inset-0"></span>
+                      </a>
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Montavimo darbai
+                        <span class="absolute inset-0"></span>
+                      </a>
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Vartų automatika
+                        <span class="absolute inset-0"></span>
+                      </a>
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Surenkami pamatai
+                        <span class="absolute inset-0"></span>
+                      </a>
+                    </div>
+                    <div class="relative rounded-lg p-4 hover:bg-gray-50">
+                      <a href="#" class="font-semibold text-gray-900">
+                        Konsolės
+                        <span class="absolute inset-0"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="text-sm font-semibold p-2 leading-6 text-gray-900">Gelerija</a>
+              <a href="#" class="text-sm font-semibold p-2 leading-6 text-gray-900">Straipsniai</a>
+              <a href="#" class="text-sm font-semibold p-2 leading-6 text-gray-900">Kontaktai</a>
             </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+            <div class="hidden lg:flex lg:flex-1 p-2 lg:justify-end">
+              
+              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">+370 655 56 439 <span aria-hidden="true"></span></a>
+              
             </div>
           </nav>
           <!-- Mobile menu, show/hide based on menu open state. -->
